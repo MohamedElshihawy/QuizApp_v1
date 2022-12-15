@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/raduis_cornered_background"
+    android:elevation="12dp"
+    android:padding="16dp">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="10dp"
+        android:layout_height="0dp"
+        android:background="@drawable/custom_button_background"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quiz_name_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Music Quiz 01"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/quiz_score_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Score: 0.0/5"
+        android:textColor="@color/highlight_text"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="@+id/quiz_name_history"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_name_history" />
+
+    <TextView
+        android:id="@+id/quiz_time_taken_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Time Taken: 00:7:30"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/quiz_score_history"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_score_history" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/quiz_start_again_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_white"
+        android:padding="16dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:text="Show"
+        app:layout_constraintBottom_toBottomOf="@+id/quiz_time_taken_history"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/quiz_time_taken_history" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

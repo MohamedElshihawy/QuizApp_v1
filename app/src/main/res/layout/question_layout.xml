@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="@color/app_background">
+
+    <ProgressBar
+        android:id="@+id/clicks_mask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ScrollView
+        android:id="@+id/questions_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_16sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true">
+
+
+            <TextView
+                android:id="@+id/question_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:padding="8dp"
+                android:text="Question Num 02"
+                android:textColor="@color/highlight_text"
+                android:textSize="45sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/question_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@drawable/raduis_cornered_background"
+                android:ellipsize="end"
+                android:padding="@dimen/_12sdp"
+                android:scrollbars="horizontal"
+                android:text="Mid Term Question"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question_num" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/question_text">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/raduis_cornered_background"
+                    android:padding="@dimen/_20sdp"
+
+                    >
+
+                    <TextView
+                        android:id="@+id/choice_a_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/choice_background"
+                        android:gravity="center"
+                        android:text="A"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/choice_a_text"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/choice_a_text" />
+
+                    <TextView
+                        android:id="@+id/choice_a_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12sdp"
+                        android:background="@drawable/answer_background"
+                        android:ellipsize="end"
+                        android:padding="@dimen/_8sdp"
+                        android:singleLine="false"
+                        android:text="Option A text"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/choice_a_button"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/choice_b_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/answer_background"
+                        android:ellipsize="end"
+                        android:padding="@dimen/_8sdp"
+                        android:singleLine="false"
+                        android:text="Option B text"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="@+id/choice_a_text"
+                        app:layout_constraintStart_toStartOf="@+id/choice_a_text"
+                        app:layout_constraintTop_toBottomOf="@+id/choice_a_text" />
+
+                    <TextView
+                        android:id="@+id/choice_c_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/choice_background"
+                        android:gravity="center"
+                        android:text="C"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/choice_c_text"
+                        app:layout_constraintEnd_toEndOf="@+id/choice_b_button"
+                        app:layout_constraintStart_toStartOf="@+id/choice_b_button"
+                        app:layout_constraintTop_toTopOf="@+id/choice_c_text" />
+
+                    <TextView
+                        android:id="@+id/choice_c_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/answer_background"
+                        android:ellipsize="end"
+                        android:padding="@dimen/_8sdp"
+                        android:singleLine="false"
+                        android:text="Option C text"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="@+id/choice_b_text"
+                        app:layout_constraintStart_toEndOf="@+id/choice_c_button"
+                        app:layout_constraintStart_toStartOf="@+id/choice_b_text"
+                        app:layout_constraintTop_toBottomOf="@+id/choice_b_text" />
+
+                    <TextView
+                        android:id="@+id/choice_d_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/choice_background"
+                        android:gravity="center"
+                        android:text="D"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/choice_d_text"
+                        app:layout_constraintEnd_toEndOf="@+id/choice_c_button"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/choice_c_button"
+                        app:layout_constraintTop_toTopOf="@+id/choice_d_text" />
+
+                    <TextView
+                        android:id="@+id/choice_d_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/answer_background"
+                        android:ellipsize="end"
+                        android:padding="@dimen/_8sdp"
+                        android:singleLine="false"
+                        android:text="Option D text"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="24sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/choice_c_text"
+                        app:layout_constraintTop_toBottomOf="@+id/choice_c_text" />
+
+                    <TextView
+                        android:id="@+id/choice_b_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/choice_background"
+                        android:gravity="center"
+                        android:text="B"
+                        android:textColor="@color/dark_purple"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/choice_b_text"
+                        app:layout_constraintEnd_toEndOf="@+id/choice_a_button"
+                        app:layout_constraintStart_toStartOf="@+id/choice_a_button"
+                        app:layout_constraintTop_toTopOf="@+id/choice_b_text" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </FrameLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="32dp"
+                android:max="30"
+                app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+                app:layout_constraintStart_toStartOf="@+id/frameLayout"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+            <TextView
+                android:id="@+id/progress_in_seconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="30 seconds"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@+id/progressBar"
+                app:layout_constraintStart_toStartOf="@+id/progressBar"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_next"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/custom_button_background"
+                android:padding="16dp"
+                android:text="Next"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+                app:layout_constraintTop_toBottomOf="@+id/progress_in_seconds" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_cancel"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/custom_button_white"
+                android:padding="16dp"
+                android:text="@string/back"
+                android:textColor="@color/dark_purple"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/button_next"
+                app:layout_constraintStart_toStartOf="@+id/frameLayout"
+                app:layout_constraintTop_toTopOf="@+id/button_next" />
+
+            <ImageView
+                android:id="@+id/back_to_history"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/quiz_submission_screen"
+        layout="@layout/quiz_result"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

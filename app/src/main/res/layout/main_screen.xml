@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragments_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:elevation="12dp"
+            android:fontFamily="sans-serif"
+            android:padding="16dp"
+            android:shadowColor="@color/dark_purple"
+            android:shadowDx="10"
+            android:shadowDy="10"
+            android:shadowRadius="5"
+            android:text="@string/quiz_app"
+            android:textColor="@color/highlight_text"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/about_us"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/custom_button_background"
+            android:padding="24dp"
+            android:text="@string/about_us"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/quiz_history"
+            app:layout_constraintStart_toStartOf="@+id/quiz_history"
+            app:layout_constraintTop_toBottomOf="@+id/quiz_history" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/quiz_category"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/custom_button_white"
+            android:padding="24dp"
+            android:text="Quiz Category"
+            android:textColor="@color/dark_purple"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/quiz_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/custom_button_white"
+            android:padding="24dp"
+            android:text="Quiz History"
+            android:textColor="@color/dark_purple"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/quiz_category"
+            app:layout_constraintStart_toStartOf="@+id/quiz_category"
+            app:layout_constraintTop_toBottomOf="@+id/quiz_category"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_out"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:background="@drawable/custom_button_white"
+            android:padding="24dp"
+            android:text="@string/sign_out"
+            android:textColor="@color/dark_purple"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="@+id/about_us"
+            app:layout_constraintStart_toStartOf="@+id/about_us"
+            app:layout_constraintTop_toBottomOf="@+id/about_us" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
